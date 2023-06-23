@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+
+  <title>portafolio</title>
+</head>
+
+<body>
+  <header class="nav">
+    <div class="contenedor">
+      <h1 class="logo"><img src="img/vilmi.jpg " width="100px" height="100px" alt="vilma Ponce">Vilma Ponce</h1>
+      <ul>
+        <li><a href="#sobre-mi">Sobre Mi</a></li>
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#paso-1">Contacto</a></li>
+        <li><a href="#contacto">Redes</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <h1>Bienvenido a mi Portafolio</h1>
+      <p>Me llamo Vilma Ponce. Soy desarrolladora Front-end en crecimiento.
+        <br>Hice mis primeros pasos en el mundo IT como tester QA manual.
+        <br> Actualmente sigo perfeccionándome de manera autodidacta y
+        <br> cursando desarrollo Frontend en Alura Latam.
+        <br> cursando desarrollo Frontend con React en Alura Latam.
+        <br>Sin dudas, un camino lleno de desafíos y metas por cumplir.
+      </p>
+    </div>
+  </section>
+
+  <section id="sobre-mi" class="container-content">
+    <h2>Sobre Mi</h2>
+    <p>Soy muy creativa, responsable, proactiva, respetuosa, comunicativa. Poseo facilidad de adaptación y
+      capacidad de trabajar en equipo, con iniciativa para resolver problemas eficientemente.</p>
+    <br>
+
+    <h3>Habilidades</h3>
+    <p>HTML, CSS, JavaScript, Bootstrap, jQuery, Git, GitHub, GitHub Desktop.<br>
+      Tester QA Manual.<br>
+      Herramientas de gestión de proyectos.<br>
+      Metodologías ágiles.<br>
+      Herramientas de diseño y creación de contenido.<br>
+      Redes sociales.<br>
+      Muy buena comunicación.<br>
+      Excelente ortografía y gramática.</p>
+  </section>
+
+  <section id="formulario-contacto">
+
+    
+    <div class="container">
+      <h2>CONTACTO</h2>
+      <form id="paso-1">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre">
+
+        <label for="correo">Correo electrónico:</label>
+        <input type="email" id="correo" name="correo">
+
+        <label for="telefono">Teléfono:</label>
+        <input type="text" id="telefono" name="telefono">
+
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" name="mensaje"></textarea>
+
+        <button type="button" id="next-btn">Siguiente</button>
+      </form>
+
+      <div id="paso-2" style="display: none;">
+        <h2>Resumen:</h2>
+        <div id="summary"></div>
+      </div>
+    </div>
+</section>
+<div id="mensaje-scroll">
+  <span class="destello">¡Bienvenido/a a mi portafolio. Si lo deseas puedes descargar mi CV!</span>
+</div>
+
+<section>
+  <a class="btn-descargar" href="" target="_blank" rel="noopener noreferrer">Descargar CV</a>
+
+</section>
+
+<div id="proyectos" class="proyectos">
+  <h1>Mis Proyectos</h1>
+  <ol>
+    <li>
+      <a href="https://vilmaponce.github.io/BarberiaAluraLatam/">Barberia Alura
+        <img src="img/tpbarberia.png" alt="Proyecto 1">
+      </a>
+    </li>
+    <li>
+      <a href="https://vilmaponce.github.io/Encriptador-Challenge-Alura/ ">Encriptador
+        <img src="img/encriptador.png" alt="Proyecto 2">
+      </a>
+    </li>
+    <li>
+      <a href="https://vilmaponce.github.io/fotografias/ ">Fotografias
+        <img src="img/fotografia.png" alt="Proyecto 3">
+      </a>
+    </li>
+    <li>
+      <a href="https://vilmaponce.github.io/ProyectAda/">Rick & Morty
+        <img src="img/Captura de pantalla.png" alt="Proyecto 1">
+      </a>
+    </li>
+  </ol>
+</div>
+
+
+<div id="contacto" class="redes">
+  <h2>REDES</h2>
+  <p>Podes ver mas de mis proyectos en github</p>
+  <ul>
+    <li><a href="https://linkedin.com/in/vilma-ponce" target="_blank"><img src="img/linkedin-logo-24.png"
+          alt="LinkedIn"></a></li>
+    <li><a href="https://github.com/vilmaponce" target="_blank"><img src="img/github-logo-24.png" alt="GitHub"></a>
+    </li>
+    <li><a href="https://gmail.com"><img src="img/gmail-logo-24.png" alt="Email"></a></li>
+    <li><a href=""><img src="img/phone-call-solid-24.png " alt="telefono"></a></li>
+  </ul>
+</div>
+
+<footer>
+ 
+
+  <p>&copy; 2023 Vilma Ponce. Todos los derechos reservados.</p>
+</footer>
+<script src="app.js"></script>
+<script src="validate.js"></script>
+<script src="scroll.js"></script>
+</body>
+
+</html>

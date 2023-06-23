@@ -1,0 +1,651 @@
+/* Estilos generales */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .container {
+    max-width: 960px;
+    margin-bottom: 200px;
+    padding: 20px;
+  }
+  
+  /* Estilos de la barra de navegación */
+  .nav {
+    background-color: #333;
+    color: #fff;
+    padding: 5px;
+  }
+  
+  .nav.active {
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  .nav.active a {
+    color: #000;
+  }
+  
+  .nav .contenedor {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .nav a:hover {
+    color: #c0392b;
+    font-weight: bold;
+  }
+  
+  .nav ul {
+    list-style: none;
+    display: flex;
+  }
+  
+  .nav ul li {
+    margin-left: 20px;
+  }
+  
+  .nav ul li a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  /* Estilos de la foto del nav */
+  .nav .logo img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    /* Agrego una sombra */
+    transition: transform 0.3s ease;
+    /* Agrego una transición */
+  }
+  
+  .nav .logo img:hover {
+    transform: scale(1.1);
+    /* Aplico un efecto de escala al hacer hover */
+  }
+  
+  /* Estilos del área de héro */
+  .hero {
+    background-image: url('https://media.istockphoto.com/id/1297540300/photo/blank-screen-laptop-on-the-table-with-blurred-living-room-background-at-night.jpg?s=170667a&w=0&k=20&c=Jhko9CnYTPKFu8QmwUCXenyyvCVsspaD2VWtoZVcQtM=');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 100px 0;
+    background-position: bottom center;
+    height: 60vh;
+    color: #2c55fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    margin-bottom: 20px;
+    z-index: -2;
+  
+  }
+  
+  .hero-container h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  
+  }
+  
+  .hero-container p {
+    font-size: 24px;
+    margin-bottom: 40px;
+  }
+  
+  .hero-container .btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .hero-container .btn:hover {
+    background-color: #555;
+  }
+  
+  .hero {
+    transition: background-image 0.5s ease;
+  }
+  
+  .hero:hover {
+    background-position: bottom center;
+  }
+  
+  .hero:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    /* Ajusto la opacidad  */
+  }
+  
+  /* Estilos de la sección "Sobre Mi" */
+  .container-content {
+  
+    font-size: 95%;
+    margin: 10px 20px;
+    color: #6a6363;
+    line-height: 30px;
+    letter-spacing: 1.2px;
+    background-color: rgba(75, 70, 73, 0.2);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+  }
+  
+  .container-content h2 {
+    font-size: 24px;
+    margin: 20px;
+  }
+  
+  .container-content h3 {
+    font-size: 24px;
+    margin: 20px;
+  }
+  
+  .container-content p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 20px;
+  }
+  
+  /*formulario*/
+  /* Estilos del formulario */
+  form {
+    margin-bottom: 20px;
+    width: 95%;
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+  }
+  
+  form input[type="text"],
+  form input[type="email"],
+  form textarea {
+    padding: 0.6rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 98%;
+    margin-bottom: 1rem;
+  }
+  
+  form button[type="submit"],
+  form button[type="button"] {
+    background-color: #1e1c1c;
+    color: #fff;
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  form button[type="submit"]:hover,
+  form button[type="button"]:hover {
+    background-color: #364886;
+  }
+  
+  #mensaje-scroll {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: #5216ea;
+    padding: 20px;
+    text-align: center;
+    font-family: bold;
+    font-size: xx-large;
+    display: none;
+    opacity: 0;
+    animation: destello 1s infinite alternate;
+  }
+  
+  #mensaje-scroll.show {
+    display: block;
+    animation: none;
+    transition: opacity 0.5s;
+    opacity: 1;
+  }
+  
+  @keyframes destello {
+    0% {
+      background-color: #333;
+    }
+  
+    30% {
+      background-color: #262f1b;
+    }
+  
+    100% {
+      background-color: #333;
+    }
+  }
+  
+  .destello {
+    animation: destello 0.5s infinite alternate;
+  }
+  
+  /*BOTON*/
+  .btn-descargar {
+    background-color: #6c5ce7;
+    color: #fff;
+    padding: 20px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    margin-top: 10px;
+    max-width: 300px;
+    position: relative;
+    overflow: hidden;
+    border: none;
+    box-shadow: 0 0 10px rgba(108, 92, 231, 0.5);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .btn-descargar span {
+    display: block;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 1.5;
+  }
+  
+  .btn-descargar:hover {
+    background-color: #a29bfe;
+    transform: scale(1.1);
+  }
+  
+  .btn-descargar::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, rgba(108, 92, 231, 0.3) 0%, rgba(255, 255, 255, 0) 80%);
+    transform: rotate(-30deg);
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .btn-descargar:hover::before {
+    opacity: 1;
+  }
+  
+  
+  
+  /* Estilos de la sección de proyectos */
+  .proyectos {
+    text-align: center;
+  }
+  
+  .proyectos h1 {
+    text-align: center;
+    margin-top: 100px;
+    font-size: 40px;
+    font-weight: bold;
+    text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.4);
+    color: #333;
+  }
+  
+  .proyectos ol {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .proyectos ol li {
+    margin: 20px;
+    text-align: center;
+  }
+  
+  .proyectos ol li a {
+    text-decoration: none;
+    color: #333;
+    position: relative;
+    display: inline-block;
+    transition: transform 0.3s ease;
+  }
+  
+  .proyectos ol li a:hover {
+    transform: translateY(-10px);
+    transform: scale(1.50);
+    transition-delay: 0.2s;
+  }
+  
+  .proyectos ol li img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 3px 50px rgba(0, 0, 0, 0.5);
+  }
+  
+  .proyectos ol li .proyecto-titulo {
+    font-size: 24px;
+    margin-top: 10px;
+    color: #777;
+  }
+  
+  /* Estilos de la sección de redes sociales */
+  .redes {
+    background-color: #f2f2f2;
+    padding: 50px 0;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  
+  .redes h2 {
+    /* Estilos del título de la sección de redes */
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    color: #333;
+  }
+  
+  .redes ul {
+    /* Estilos de la lista de enlaces de redes */
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .redes ul li {
+    /* Estilos de cada elemento de enlace de redes */
+    margin: 0 10px;
+  }
+  
+  .redes ul li a {
+    /* Estilos del enlace de cada elemento de redes */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+  }
+  
+  .redes ul li a:hover {
+    /* Efecto de transformación al pasar el cursor sobre el enlace */
+    transform: scale(1.1);
+  }
+  
+  .redes ul li a img {
+    /* Estilos de la imagen de cada enlace de redes */
+    width: 24px;
+    height: 24px;
+  }
+  
+  /* Estilos adicionales para los enlaces de redes */
+  .redes ul li a {
+    /* Estilos adicionales  */
+    color: #333;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Estilos del pie de página */
+  footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  footer p {
+    margin: 0;
+  }
+  
+  
+  /* Estilos generales */
+  
+  
+  /* Estilos de la barra de navegación en pantallas mas chicas */
+  @media screen and (max-width: 768px) {
+    .nav {
+  
+      padding-right:50px;  
+    }
+    .logo {
+      display: none;
+    }
+    .nav .contenedor {
+      flex-direction: column;
+    }
+    .nav ul {
+      margin-top: 10px;
+      flex-direction: column;  
+    }
+    .nav ul li {
+      margin-left: 0;
+      margin-bottom: 10px;
+      font-size:x-large;   
+    }
+    .nav ul li a {
+      padding: 8px 10px;
+      border-radius: 5px; 
+  
+      padding: 10px;
+    }
+  
+    .logo {
+      display: none;
+    }
+  
+    .nav .contenedor {
+      flex-direction: column;
+    }
+  
+    .nav ul {
+      margin-top: 10px;
+      flex-direction: column;
+    }
+  
+    .nav ul li {
+      margin-left: 0;
+      margin-bottom: 10px;
+    }
+  
+    .nav ul li a {
+      padding: 8px 10px;
+      border-radius: 5px;
+  
+    }
+  }
+  
+  /* Estilos del área de hero en pantallas más grandes */
+  @media screen and (max-width:1500px) {
+    .hero {
+      padding: 50px 0;
+      background-image:none;
+    }
+    .hero h1 {
+      font-size:24px;
+      margin-top: 100px;
+    }
+    .hero p {
+      font-size:22px;
+  
+    }
+  
+    .hero h1 {
+      font-size: 24px;
+      margin-top: 300px;
+  
+    }
+  
+    .hero p {
+      font-size: 16px;
+  
+      margin-top: 10px;
+    }
+  }
+  
+  /* Estilos de la sección "Sobre Mi" en pantallas más pequeñas */
+  @media screen and (max-width: 768px) {
+    .container-content {
+      padding: 30px 0;
+    }
+  
+    .container-content h2 {
+      font-size: 20px;
+    }
+  
+    .container-content h3 {
+      font-size: 18px;
+    }
+  
+    .container-content p {
+      font-size: 14px;
+    }
+  }
+  
+  /* Estilos de la sección de proyectos en pantallas más pequeñas */
+  @media screen and (max-width: 768px) {
+    .proyectos {
+  
+      padding:20px 0;
+      
+    }
+  
+    .proyectos h1 {
+      font-size:30px;
+    }
+  
+    .proyectos ol li img {
+      width: 170px;
+      height: 170px;
+      
+    }
+    #mensaje-scroll{
+     text-align:justify;
+     font-size:x-large;
+     padding:15px;
+     
+  
+      padding: 30px 0;
+    }
+  
+    .proyectos h1 {
+      font-size: 50px;
+    }
+  
+    .proyectos ol li img {
+      width: 150px;
+      height: 150px;
+    }
+  }
+  
+  /* Estilos de la sección de redes sociales en pantallas más pequeñas */
+  @media screen and (max-width: 768px) {
+    .redes {
+      padding: 30px 0;
+    }
+  
+    .redes h2 {
+      font-size: 20px;
+    }
+  
+    .redes ul li {
+      margin: 0 5px;
+    }
+  }
+  
+  
+  /* Estilos del formulario en pantallas más pequeñas */
+  @media screen and (max-width: 768px) {
+    #formulario-contacto {
+      padding:30px;
+      margin-left:0px;
+      margin-right:20px;
+    }
+
+}
+  /* Estilos del formulario en pantallas más pequeñas */
+  @media screen and (max-width: 768px) {
+    .formulario {
+      padding: 30px 0;
+  
+    }
+  
+    .formulario h2 {
+      font-size: 20px;
+    }
+  
+    .formulario input[type="text"],
+    .formulario textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+  
+    .formulario input[type="submit"] {
+      padding: 10px 20px;
+      background-color: #f60;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+  }
+  
+  /*Boton*/
+  .btn-descargar{
+    margin-top:-100px;
+  }
+  /* Estilos del pie de página en pantallas más pequeñas */
+  @media screen and (max-width: 768px) {
+  
+  .redes ul {
+      flex-direction: column;
+      font-size: 50px; 
+  }
+  }
+  /* Estilos del pie de página en pantallas más pequeñas */
+  @media screen and (max-width: 768px) {
+  
+    .redes ul {
+      flex-direction: column;
+      font-size: 50px;
+  
+  
+    }
+    footer {
+      padding: 10px;
+    }
+  }
+  
+  
