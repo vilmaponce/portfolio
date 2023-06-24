@@ -12,7 +12,7 @@ nextBtn.addEventListener("click", function () {
   let mensaje = document.querySelector("#mensaje").value;
 
   // mostrar resumen en el segundo paso
-  summary.innerHTML = `Nombre: ${nombre}<br>Email: ${email}<br>Telefono: ${telefono}<br>Mensaje: ${mensaje}`;
+  summary.innerHTML = `ENVIADO`;
 
   // ocultar el primer paso y mostrar el segundo paso
   paso1.style.display = "none";

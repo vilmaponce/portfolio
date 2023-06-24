@@ -68,6 +68,8 @@ body {
     /* Aplico un efecto de escala al hacer hover */
   }
   
+  
+  
   /* Estilos del área de héro */
   .hero {
     background-image: url('https://media.istockphoto.com/id/1297540300/photo/blank-screen-laptop-on-the-table-with-blurred-living-room-background-at-night.jpg?s=170667a&w=0&k=20&c=Jhko9CnYTPKFu8QmwUCXenyyvCVsspaD2VWtoZVcQtM=');
@@ -421,12 +423,14 @@ body {
   footer {
     background-color: #333;
     color: #fff;
-    padding: 20px;
+    padding:80px;
     text-align: center;
   }
   
   footer p {
-    margin: 0;
+    margin:0;
+    text-decoration-style: solid;
+    font-size:large;
   }
   
   
@@ -436,12 +440,10 @@ body {
   /* Estilos de la barra de navegación en pantallas mas chicas */
   @media screen and (max-width: 768px) {
     .nav {
-  
-      padding-right:50px;  
+     padding-right:50px;  
+      
     }
-    .logo {
-      display: none;
-    }
+    
     .nav .contenedor {
       flex-direction: column;
     }
@@ -462,7 +464,7 @@ body {
     }
   
     .logo {
-      display: none;
+      display:inline-block;
     }
   
     .nav .contenedor {
@@ -482,15 +484,14 @@ body {
     .nav ul li a {
       padding: 8px 10px;
       border-radius: 5px;
-  
-    }
+    } 
   }
   
   /* Estilos del área de hero en pantallas más grandes */
   @media screen and (max-width:1500px) {
     .hero {
       padding: 50px 0;
-      background-image:none;
+      background-size:100%;
     }
     .hero h1 {
       font-size:24px;
@@ -498,19 +499,23 @@ body {
     }
     .hero p {
       font-size:22px;
-  
     }
-  
-    .hero h1 {
-      font-size: 24px;
-      margin-top: 300px;
-  
+  }
+    @media screen and (max-width: 768px) {
+    
+    .hero {
+        padding: 50px 0;
+        background-size:80%;
+    }
+      .hero h1 {
+      font-size:30px;
+      margin-top:110px;
     }
   
     .hero p {
-      font-size: 16px;
-  
-      margin-top: 10px;
+      font-size:15px;
+      margin-bottom:90px;
+      text-align:initial;
     }
   }
   
@@ -553,52 +558,24 @@ body {
     #mensaje-scroll{
      text-align:justify;
      font-size:x-large;
-     padding:15px;
-     
-  
-      padding: 30px 0;
+     padding: 30px 0;
     }
   
-    .proyectos h1 {
-      font-size: 50px;
-    }
-  
-    .proyectos ol li img {
-      width: 150px;
-      height: 150px;
-    }
+    
   }
-  
-  /* Estilos de la sección de redes sociales en pantallas más pequeñas */
-  @media screen and (max-width: 768px) {
-    .redes {
-      padding: 30px 0;
-    }
-  
-    .redes h2 {
-      font-size: 20px;
-    }
-  
-    .redes ul li {
-      margin: 0 5px;
-    }
-  }
-  
-  
+
+
   /* Estilos del formulario en pantallas más pequeñas */
   @media screen and (max-width: 768px) {
+    
     #formulario-contacto {
       padding:30px;
       margin-left:0px;
       margin-right:20px;
     }
-
-}
-  /* Estilos del formulario en pantallas más pequeñas */
-  @media screen and (max-width: 768px) {
+    
     .formulario {
       padding: 30px 0;
-  
     }
   
     .formulario h2 {
@@ -621,31 +598,35 @@ body {
       border-radius: 5px;
     }
   }
-  
+    
+  /* Estilos de la sección de redes sociales en pantallas más pequeñas */
+  @media screen and (max-width: 768px) {
+    .redes {
+      padding:20px 0;
+    }
+    .redes h1{
+      text-align: center;
+    }
+    .redes h2 {
+      font-size: 20px;
+    }
+    
+    .redes ul{
+      flex-direction:column;
+ 
+    }
+  }
   /*Boton*/
   .btn-descargar{
     margin-top:-100px;
   }
   /* Estilos del pie de página en pantallas más pequeñas */
   @media screen and (max-width: 768px) {
-  
-  .redes ul {
-      flex-direction: column;
-      font-size: 50px; 
-  }
-  }
-  /* Estilos del pie de página en pantallas más pequeñas */
-  @media screen and (max-width: 768px) {
-  
-    .redes ul {
-      flex-direction: column;
-      font-size: 50px;
-  
-  
-    }
+
     footer {
-      padding: 10px;
+      padding:50px;
     }
   }
+
   
   
